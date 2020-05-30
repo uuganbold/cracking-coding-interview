@@ -14,12 +14,20 @@ public class TestUtils {
     }
 
 
-    public static void assertListEquals(ListNode head, int[] expected){
+    public static void assertListEquals(int[] expected, ListNode actual){
          int i=0;
-         while(head!=null){
-             Assertions.assertEquals(expected[i++],head.data);
-             head=head.next;
+         while(actual!=null){
+             Assertions.assertEquals(expected[i++],actual.data);
+             actual=actual.next;
          }
          Assertions.assertEquals(expected.length,i);
+    }
+
+    public static ListNode findNode(ListNode head, int value){
+        while(head!=null){
+            if(head.data==value) return head;
+            head=head.next;
+        }
+        return null;
     }
 }

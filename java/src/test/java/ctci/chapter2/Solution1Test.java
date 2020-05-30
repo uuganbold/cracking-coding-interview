@@ -27,22 +27,22 @@ public class Solution1Test {
     public void testUniqueValuedList(){
          ListNode head=TestUtils.buildList(new int[]{1,4,6,2,3,9});
          head=Solution1.removeDuplicatesSingleSet(head);
-         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,9});
+         TestUtils.assertListEquals(new int[]{1,4,6,2,3,9},head);
 
          head=Solution1.removeDuplicatesWithoutSet(head);
-         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,9});
+         TestUtils.assertListEquals(new int[]{1,4,6,2,3,9},head);
     }
 
     @Test
     public void testDuplicatedValues(){
          ListNode head=TestUtils.buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
          head=Solution1.removeDuplicatesSingleSet(head);
-         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,7,9});
+         TestUtils.assertListEquals(new int[]{1,4,6,2,3,7,9},head);
 
 
          head=TestUtils.buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
          head=Solution1.removeDuplicatesWithoutSet(head);
-         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,7,9});
+         TestUtils.assertListEquals(new int[]{1,4,6,2,3,7,9},head);
 
     }
 
