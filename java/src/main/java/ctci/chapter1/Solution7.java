@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 import java.util.Arrays;
 public class Solution7 {
     

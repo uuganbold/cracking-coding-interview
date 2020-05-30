@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 
 public class Solution6 {
     
@@ -36,6 +36,7 @@ public class Solution6 {
         if(builder.length()>=str.length()) return str;
         else return builder.toString();
     }
+
 
     public static void main(String[] args){
         System.out.println(compress("a"));

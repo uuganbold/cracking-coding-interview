@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 import java.util.*;
 
 public class Solution2 {
@@ -7,7 +7,6 @@ public class Solution2 {
         Unicode or Ascii?
         English letters or any character?
         Can contain capital letter?
-        How long?
     */
 
     /*

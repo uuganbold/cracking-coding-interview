@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 import java.util.*;
 public class Solution1{
     
@@ -21,6 +21,22 @@ public class Solution1{
         return true;
     }
 
+    /**
+     * T: O(N)
+     * S: O(1)
+     */
+    public boolean isUniqueEnglish(String s){
+        if(s==null||s.length()==0) return true;
+        int set=0;
+        for(char ch:s.toCharArray()){
+            int shiftNumber=ch-'a';
+            if((set&(1<<shiftNumber))!=0){
+                return false;
+            }
+            set=set|(1<<shiftNumber);
+        }
+        return true;
+    }
 
     /*
         T: O(N^2)

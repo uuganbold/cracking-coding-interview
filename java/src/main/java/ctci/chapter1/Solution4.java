@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 
 public class Solution4 {
 
@@ -24,12 +24,15 @@ public class Solution4 {
              }       
          }
 
-         int oddCount=0;
+         boolean oddCount=false;
          for(int i=0;i<charMap.length;i++){
-             if(charMap[i]%2==1) oddCount+=1;
+             if(charMap[i]%2==1) {
+                 if(oddCount) return false;
+                 oddCount=true;
+             }
          }
 
-         return oddCount<2;
+         return true;
 
     }
 

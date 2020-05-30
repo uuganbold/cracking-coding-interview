@@ -1,4 +1,4 @@
-package javu.chapter1;
+package ctci.chapter1;
 
 public class Solution3 {
     
@@ -9,6 +9,14 @@ public class Solution3 {
     /*
         T: O(N)
         S: O(1)
+
+        [mongol%20uls                               ], 10
+
+        [mongol%20uls            ]  n^2
+
+        [           mongol%20uls]
+        [mongol%20ulsongol%20uls]
+
     */
     public static void urlify(char[] original, int length){
         
@@ -25,6 +33,7 @@ public class Solution3 {
         int alignPoint=0;
         for(int i=toPoint+1;i<original.length;i++){
             original[alignPoint++]=original[i];
+            original[i]=' ';
         }
 
         /*
