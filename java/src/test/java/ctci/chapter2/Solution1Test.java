@@ -25,47 +25,29 @@ public class Solution1Test {
 
     @Test
     public void testUniqueValuedList(){
-         ListNode head=buildList(new int[]{1,4,6,2,3,9});
+         ListNode head=TestUtils.buildList(new int[]{1,4,6,2,3,9});
          head=Solution1.removeDuplicatesSingleSet(head);
-         assertListEquals(head,new int[]{1,4,6,2,3,9});
+         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,9});
 
          head=Solution1.removeDuplicatesWithoutSet(head);
-         assertListEquals(head,new int[]{1,4,6,2,3,9});
+         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,9});
     }
 
     @Test
     public void testDuplicatedValues(){
-         ListNode head=buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
+         ListNode head=TestUtils.buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
          head=Solution1.removeDuplicatesSingleSet(head);
-         assertListEquals(head,new int[]{1,4,6,2,3,7,9});
+         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,7,9});
 
 
-         head=buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
+         head=TestUtils.buildList(new int[]{1,4,6,4,4,2,3,1,7,1,9,6});
          head=Solution1.removeDuplicatesWithoutSet(head);
-         assertListEquals(head,new int[]{1,4,6,2,3,7,9});
+         TestUtils.assertListEquals(head,new int[]{1,4,6,2,3,7,9});
 
     }
 
 
-    private ListNode buildList(int[] values){
-        ListNode head=new ListNode(values[0]);
-        ListNode curr=head;
-        for(int i=1;i<values.length;i++){
-            curr.next=new ListNode(values[i]);
-            curr=curr.next;
-        }
-        return head;
-    }
-
-
-    private void assertListEquals(ListNode head, int[] expected){
-         int i=0;
-         while(head!=null){
-             Assertions.assertEquals(expected[i++],head.data);
-             head=head.next;
-         }
-         Assertions.assertEquals(expected.length,i);
-    }
+   
 
 
     
