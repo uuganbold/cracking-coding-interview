@@ -13,6 +13,25 @@ public class TestUtils {
         return head;
     }
 
+    public static int[] toArray(ListNode head){
+        int size=0;
+        ListNode curr=head;
+        while(curr!=null){
+            size++;
+            curr=curr.next;
+        }
+
+        int[] ans=new int[size];
+        curr=head;
+        int i=0;
+        while(curr!=null){
+            ans[i++]=curr.data;
+            curr=curr.next;
+        }
+
+        return ans;
+    }
+
 
     public static void assertListEquals(int[] expected, ListNode actual){
          int i=0;
