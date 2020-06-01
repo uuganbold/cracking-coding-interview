@@ -6,12 +6,20 @@ public class Solution5 {
         List how big?
         long vs int?
     */
+    /*
+        T: O(a+b)
+        S: O(1)
+    */
     public static  ListNode sum(ListNode a, ListNode b){
         if(a==null&&b==null) return null;
         int ansValue=retrieveReverseOrder(a)+retrieveReverseOrder(b);
         return makeListReverseOrder(ansValue); 
     }
 
+    /*
+        T: O(min(a,b))
+        S: O(1)
+    */
     public static ListNode sumWhileTraversing(ListNode a, ListNode b){
         if(a==null&&b==null) return null;
         ListNode ans=new ListNode(0);
